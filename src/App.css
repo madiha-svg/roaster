@@ -68,12 +68,12 @@
 .next {
   position: absolute;
   right:80px;
-  bottom:310px;
+  top:560px;
 }
 .prev {
   position: absolute;
-  right:300px;
-  bottom:310px;
+  right:250px;
+  top:560px;
 }
 table {
   border-collapse: collapse;
@@ -90,6 +90,7 @@ th {
 p {
   position: absolute;
   right:160px;
+  top:540px;
 }
 @keyframes App-logo-spin {
   from {

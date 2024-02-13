@@ -1,10 +1,29 @@
-import React, {useState} from "react";
-import employees from "./Sample.json";
+import React, {useState, useEffect} from "react";
+//  import employees from "./Sample.json";
 
 
 
-const Table= ({employees, showModal}) =>{
+
+const Table= () =>{
+    const [column, setColumn] = useState([]);
+    const [records, setRecords] = useState([]);
     
+
+    useEffect(()=> {
+        fetch('http://localhost:3000/Sample.json')
+        .then(res=>res.json())
+        .then(data => {
+            setColumn(Object.keys(data.employees[0]))
+            setRecords(data.employees)
+    })
+    },[]);
+
+  /*  const handleEmployeeClick = (employees) => {
+        selectedEmployee(employees);
+    }
+    const closeModal = () => {
+        setSelectedEmployee(null);
+    } */
     return (
         <div className="tab">
             <table>
@@ -17,17 +36,20 @@ const Table= ({employees, showModal}) =>{
                     </tr>
                 </thead>
                 <tbody>
-                    {employees.map((employees,id => (
+                    {records.map((record,id)=> (
                         <tr key ={id}>
-                            <td>{employees.name}</td>
-                            <td>{employees.contact}</td>
-                            <td>{employees.address}</td>
+                            <td>{record.id}</td>
+                            <td>{record.name}</td>
+                            <td>{record.contact}</td>
+                            <td>{record.Address}</td>
                         </tr>
 
 
-                   ) ))}
+                    ))}
                 </tbody>
             </table>
+            
+           
         </div>
     )
 }
