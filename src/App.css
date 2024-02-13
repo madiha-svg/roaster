@@ -28,6 +28,69 @@
   color: #61dafb;
 }
 
+.header {
+  text-align: left;
+}
+.motto {
+  text-align: left;
+  position:relative;
+  bottom:10px;
+}
+.date {
+  text-align: right;
+  position:relative;
+  bottom:50px;
+}
+.line {
+  position: relative;
+  bottom:70px;
+}
+.box {
+  width:200px;
+  height:10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: absolute;
+  right:90px ;
+  top:105px;
+  
+}
+.button {
+  position:absolute;
+  top:110px;
+  right:20px;
+}
+.tab {
+  border:1px solid black;
+  padding:10px;
+
+}
+.next {
+  position: absolute;
+  right:80px;
+  bottom:310px;
+}
+.prev {
+  position: absolute;
+  right:300px;
+  bottom:310px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,td {
+  border: 1px solid #ddd;
+  padding: 18px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+p {
+  position: absolute;
+  right:160px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
